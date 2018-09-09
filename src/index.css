@@ -12,54 +12,70 @@
 }
 
 @page {
-  size: auto;
+  size: 241mm 140mm​;
   /* auto is the initial value */
-  margin: 0mm;
+  margin: 0mm auto;
   /* this affects the margin in the printer settings */
 }
 
 /* style sheet for "A4" printing */
-@media print and (width: 21cm) and (height: 29.7cm) {
+/* @media print and (width: 21cm) and (height: 29.7cm) {
   @page {
     margin: 3cm;
   }
+} */
+#container
+  .ant-table.ant-table-default.ant-table-bordered.ant-table-scroll-position-left
+  table
+  td {
+  line-height: 20px;
 }
 
 @media print {
   body {
     font-size: 20pt;
   }
-  #container {
-    background-color: black;
+  @page {
+    size: 241mm 140mm​; /* auto is the initial value */
+    margin: 0mm auto; /* this affects the margin in the printer settings */
   }
   .ant-pagination.ant-table-pagination {
     display: none;
   }
   table {
-    page-break-after: always;
+    /* 防止打印时多出一页 */
+    page-break-after: auto;
+  }
+  #container
+    .ant-table.ant-table-default.ant-table-bordered.ant-table-scroll-position-left
+    table
+    td {
+    line-height: 30px;
+    height: 30px;
+    padding: 0;
   }
 }
 /* https://stackoverflow.com/questions/1545849/possible-to-force-printer-setup-paper-size-in-javascript */
 /* style sheet for "A4" printing */
-@media print and (width: 21cm) and (height: 29.7cm) {
+/* @media print and (width: 21cm) and (height: 29.7cm) {
   @page {
     margin: 5cm;
   }
-}
+} */
 
 /* style sheet for "letter" printing */
-@media print and (width: 8.5in) and (height: 11in) {
+/* @media print and (width: 8.5in) and (height: 11in) {
   @page {
     margin: 1in;
   }
-}
+} */
 
 /* style sheet for "letter" printing */
-@media print and (width: 241mm) and (height: 140mm) {
+/* @media print and (width: 241mm) and (height: 140mm) {
   @page {
     margin: 50mm;
   }
-}
+} */
 /* A4 Landscape 横式打印*/
 /* @page {
   size: A4 landscape;

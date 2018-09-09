@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "react-resizable": "latest",
-    "react-dom": "latest",
+    "antd": "latest",
     "react": "latest",
-    "antd": "latest"
+    "react-dom": "latest",
+    "react-resizable": "latest"
   },
   "name": "p334jjv940",
   "description": null,
