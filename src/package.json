@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "react-resizable": "latest",
+    "react-dom": "latest",
+    "react": "latest",
+    "antd": "latest"
+  }
+}
